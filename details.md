@@ -14,7 +14,7 @@
  Instead the service provider responds with the value of the token 
  when the token is verified and cached-in by the content provider.
  
- ## Interaction between content provider and user
+## Interaction between content provider and user
  
  The content provider can announce that it supports pennytoken micropayment 
  services by including an element of the following format in the `html` of any page it serves.
