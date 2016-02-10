@@ -33,6 +33,6 @@ Three types of actors interplay during a micropayment transacting.
 
 ## Working Principle 
 The micropayment provider sells secret tokens to the user. Like poststamps. 
-The user's browser sends one or more of these tokens with the content request, for example by appending them to the request url. 
-The content providers verifies and thereby cashes in the secret token with the micropayment provider. This can happen synchronously before serving the content. 
+The user's browser sends one or more of these tokens with the `http` request, for example by appending them to the url of a `GET` request. 
+The content providers verifies and thereby cashes in the secret token with the micropayment provider. This can happen synchronously before serving the content. The content provider then responds to the `http` request and serves the for-pay content.
 The micropayment provider regularly sends payments to the content provider corresponding to the total value of the cashed in tokens. 
