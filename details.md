@@ -48,4 +48,4 @@ Tokens are sent by adding the pennytoken json array as url parameters to the `GE
 
 The content provider caches in and thereby verifies the the tokens and responds to the get request. 
 
-## Interaction between content provider and service provider
+## Interaction between content provider and mircopayment service provider
