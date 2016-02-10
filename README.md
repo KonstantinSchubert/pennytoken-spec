@@ -11,16 +11,16 @@ By forcing interoperability, it tries to prevent lock-in effects as well as a ha
 
 Three types of actors interplay during a micropayment transacting. 
 
-1. The content creator 
+1. The content creator: 
     For example the operator of an online news website. 
-2. The user
+2. The user: 
     For example a person browsing the internet, consuming media content on different websites. 
-3. The micropayment service provider 
+3. The micropayment service provider: 
     He is paid by the user and pays the content creators according to usage. 
 
 ## Design goals 
  * Works across an unlimited number of content providers. 
- * Avoid user tracking by the content providers. 
+ * Avoid user tracking. 
  * Easy implementation for the content providers.
  * Pay-per-view for prices comparable to advertisement revenue. 
  * Frictionless user experience. No registrations, no subscriptions, no logins. 
@@ -28,7 +28,7 @@ Three types of actors interplay during a micropayment transacting.
 ## Design limitations 
  * The user must install a browser plugin that implements the specification. 
  * The content provider must be trusted regarding issues such as money laundering. 
- * The micropayment provider is theoretically able to track which websites are issued by the users. 
+ * The micropayment provider is theoretically able to track which websites are visited by the users. 
 
 
 ## Working Principle 
