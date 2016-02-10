@@ -5,7 +5,7 @@
  
  ```
  {
-   "pennytoken-service-provider" : "<Identifying URL of the service provider that issued the token.>"
+   "pennytoken-service-provider" : "<Identifying domain of the service provider that issued the token.>"
    "pennytoken-token-secret" : <The secret that uniquely identifies the token.>
  }
  ```
@@ -25,21 +25,27 @@
  ```
  <meta content='
 		{
-		    "pennytoken": {
-		      {
-		        "urls"    : <regex pattern matching all urls that support/require pennytokens. E.g. "http://www.nyt.com/*">,
-		        "price"   : <token price per page load in fractions of dollar cents>
-		        "feature" : <a description of what is offered in exchange for the tokens. E.g. "no ads">
-		      }
-		    }
+		    
+		     	"providers" : {<list of idetentifying domains of supported pennytoken service providers>}
+		      	"contents" :{
+		      		{
+		            	"urls"    : <regex pattern matching all urls of this content provider
+		            			that support/require pennytokens.">,
+		            	"price"   : <token price per page load in fractions of dollar cents>
+		            	"feature" : <a description of what is offered in exchange for the tokens. E.g. "no ads">
+		        	}
+		        }
 		}'
 	>
-	```
+ ```
+
 	
-	The users browser plugin parses the information in html and manages when tokens are sent. 
-	How this is done is left to the implementation. However, the intention is NOT that the user confirms the issue
-	of a token on every page request. 
-	
-	
- 
- 
+The users browser plugin parses the information in html and manages when tokens are sent. 
+How this is done is left to the implementation. However, the intention is NOT that the user confirms the issue
+of a token on every page request. 
+
+Tokens are sent by adding the pennytoken json array as url parameters to the `GET` request that requests the content which the pennytokens are payment for. 
+
+The content provider caches in and thereby verifies the the tokens and responds to the get request. 
+
+## Interaction between content provider and service provider
