@@ -1,5 +1,6 @@
 # pennytoken-spec
- ## The specification for the pennytoken micropayment system
+
+## The specification for the pennytoken micropayment system
 
 The pennytoken specification aims to define a micropayment system that provides an immediate benefit both to the content providers and the consumers. The goal is friction-free cross-provider consumption of online media and other services. 
 
@@ -18,10 +19,20 @@ Three types of actors interplay during a micropayment transacting.
     He is paid by the user and pays the content creators according to usage. 
 
 ## Design goals 
-
- * No tracking  scripts. 
+ * Works across an unlimited number of content providers. 
  * Avoid user tracking by the content providers. 
  * Easy implementation for the content providers.
  * Pay-per-view for prices comparable to advertisement revenue. 
  * Frictionless user experience. No registrations, no subscriptions, no logins. 
 
+## Design limitations 
+ * The user must install a browser plugin that implements the specification. 
+ * The content provider must be trusted regarding issues such as money laundering. 
+ * The micropayment provider is theoretically able to track which websites are issued by the users. 
+
+
+## Working Principle 
+The micropayment provider sells secret tokens to the user. Like poststamps. 
+The user's browser sends one or more of these tokens with the content request, for example by appending them to the request url. 
+The content providers verifies and thereby cashes in the secret token with the micropayment provider. This can happen synchronously before serving the content. 
+The micropayment provider regularly sends payments to the content provider corresponding to the total value of the cashed in tokens. 
