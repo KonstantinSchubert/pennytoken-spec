@@ -14,7 +14,12 @@
  Instead the service provider responds with the value of the token 
  when the token is verified and cached-in by the content provider.
  
+## Micropayment service providers
+ 
 ## Interaction between content provider and user
+
+ This is the part of the micropayment infrastructure that benefits most from standardization because it allows the user 
+ to use the same kind of tokens, bought from the same service provider with many content providers.
  
  The content provider can announce that it supports pennytoken micropayment 
  services by including an element of the following format in the `html` of any page it serves.
