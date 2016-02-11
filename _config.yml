@@ -2,6 +2,7 @@
 title: pennytoken micropayment specification
 email: schubert.konstantin@gmail.com
 description: "The specification for the pennytoken micropayment system"
+source: "/pennytoken-spec/"
 
 # Build settings
 markdown: kramdown
