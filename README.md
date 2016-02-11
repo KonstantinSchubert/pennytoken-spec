@@ -1,5 +1,5 @@
 ---
-title: The pennytoken specifiction
+title: The pennytoken Specification
 ---
 # pennytoken-spec
 
