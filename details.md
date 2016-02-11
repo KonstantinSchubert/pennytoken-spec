@@ -71,7 +71,7 @@ While multiple competing micropayment service proivders supported by the content
 
 The API of the micropayment service provider should offer a call that simultaneously verifies, caches in and devalues the tokens.
 
-A `POST` to `https://<identifying-domain-of-service-provider>/cashIn/ with the information about
+A `POST` to `https://<identifying-domain-of-service-provider>/cashIn/` with the information about
  * service provider that issued the token
  * token secret
  * identifying information about the content proivder
