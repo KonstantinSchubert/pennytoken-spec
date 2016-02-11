@@ -28,18 +28,18 @@
  that can alternatively be served without ads when pennytokens are passed.
  
  ```
- <meta content='
+ <meta pennytoken-content='
 		{
 		    
-		     	"providers" : {<list of idetentifying domains of supported pennytoken service providers>}
-		      	"contents" :{
+		     	"providers" : [<list of idetentifying domains of supported pennytoken service providers>]
+		      	"contents" :[
 		      		{
-		            	"urls"    : <regex pattern matching all urls of this content provider
-		            			that support/require pennytokens.">,
-		            	"price"   : <token price per page load in fractions of dollar cents>
+		            	"urls"    : [< list of regex patterns matching all urls of this content provider
+		            			that support/require pennytokens.">],
+		            	"price"   : <token price per page load in fractions of dollar cents>,
 		            	"feature" : <a description of what is offered in exchange for the tokens. E.g. "no ads">
 		        	}
-		        }
+		        ]
 		}'
 	>
  ```
@@ -52,5 +52,15 @@ of a token on every page request.
 Tokens are sent by adding the pennytoken json array as url parameters to the `GET` request that requests the content which the pennytokens are payment for. 
 
 The content provider caches in and thereby verifies the the tokens and responds to the get request. 
+
+## Interaction between micropayment service provider and user
+
+The interactoin between micropayment serivce provider and user is not standardized except for the areas that ensure that any browser plugin which implements the standard is compatible with every provider.
+To this end, the tokens which are purchased by the user must be made available by including the following meta tag in `html`:
+
+ ```
+ <meta pennytoken-tokens='<link to a json file with a json list of fresh tokens >'
+	>
+ ```
 
 ## Interaction between content provider and mircopayment service provider
