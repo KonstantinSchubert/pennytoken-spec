@@ -59,8 +59,7 @@ The interactoin between micropayment serivce provider and user is not standardiz
 To this end, the tokens which are purchased by the user must be made available by including the following meta tag in `html`:
 
  ```
- <meta pennytoken-tokens='<link to a json file with a json list of fresh tokens >'
-	>
+ <meta pennytoken-tokens='<link to a json file with a json list of fresh tokens >'>
  ```
 
 ## Interaction between content provider and mircopayment service provider
