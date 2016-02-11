@@ -1,14 +1,16 @@
 ---
-title: The pennytoken Specification
+title: The Pennytoken Micropayment System
+layout: page
 ---
-# pennytoken-spec
 
-## The specification for the pennytoken micropayment system
 
 The pennytoken specification aims to define a micropayment system that provides an immediate benefit both to the content providers and the consumers. The goal is friction-free cross-provider consumption of online media and other services. 
 
 By forcing interoperability, it tries to prevent lock-in effects as well as a harmful fragmentation. It also leaves room for competing operators to differentiate.
 
+## Specification
+
+[The specification can be found here](details/).
 
 ## The actors 
 

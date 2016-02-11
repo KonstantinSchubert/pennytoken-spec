@@ -1,0 +1,8 @@
+# Site settings
+title: pennytoken micropayment specification
+email: schubert.konstantin@gmail.com
+description: "The specification for the pennytoken micropayment system"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
