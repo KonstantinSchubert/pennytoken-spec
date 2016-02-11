@@ -75,5 +75,6 @@ A `POST` to `https://<identifying-domain-of-service-provider>/cashIn/` with the 
  * service provider that issued the token
  * token secret
  * identifying information about the content proivder
- should the value of the token or an error if the token is invalid.
+
+should the value of the token or an error if the token is invalid.
 This implies that if the same content is `POST`ed twice it will return an error on the second time, becuase the token has been invalideated on the first call.
