@@ -1,4 +1,5 @@
 ---
+title: The pennytoken specifiction
 ---
 # pennytoken-spec
 
