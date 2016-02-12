@@ -1,5 +1,5 @@
 ---
-title: The Pennytoken Micropayment Standard
+title: A Micropayment Standard
 layout: page
 ---
 
