@@ -66,9 +66,9 @@ The content provider caches in and thereby verifies the the tokens and responds 
 The interactoin between micropayment serivce provider and user is not standardized except for the areas that ensure that any browser plugin which implements the standard is compatible with every provider.
 To this end, the tokens which are purchased by the user must be made available by including the following meta tag in the `html` of a page served on the `https` identifying domain of the provider:
 
- ```
- <meta pennytoken-tokens="link to a json file with a json list of fresh tokens">
- ```
+ 
+    <meta pennytoken-tokens="link to a json file with a json list of fresh tokens">
+ 
 
 ## Interaction between content provider and mircopayment service provider
 

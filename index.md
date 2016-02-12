@@ -1,5 +1,5 @@
 ---
-title: Design Overview
+title: The Pennytoken Micropayment Standard
 layout: page
 ---
 
