@@ -3,6 +3,8 @@ title: The Pennytoken Specification
 layout: page
 ---
 
+# Protocol version 0.1
+
 ## Token format
 
  Tokens are flat json arrays. This way they can be appended as url parameterst to `http` `GET` requests.
@@ -19,6 +21,16 @@ layout: page
  The value of the pennytoken is not part of the token itself. 
  Instead the service provider responds with the value of the token 
  when the token is verified and cached-in by the content provider.
+
+## The user 
+
+The user's browser must support the pennytoken standard. Most easily this can be achieved via a browser plugin.
+The user's browser should announce its support for the pennytoken standard by issuing a custom event
+
+    var event = new CustomEvent('pennytoken-supported', { 'version': 0.1 });
+    document.dispatchEvent(event);
+
+
  
 ## Micropayment service providers
 
