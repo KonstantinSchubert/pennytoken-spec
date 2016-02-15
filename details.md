@@ -25,10 +25,11 @@ layout: page
 ## The user 
 
 The user's browser must support the pennytoken standard. Most easily this can be achieved via a browser plugin.
-The user's browser should announce its support for the pennytoken standard by issuing a custom event
+The user's browser should announce its support for the pennytoken standard by means of the HTML5 `window.postMessage` API
 
-    var event = new CustomEvent('pennytoken-supported', { 'version': 0.1 });
-    document.dispatchEvent(event);
+    window.postMessage({ "pennytoken-protocol-version": "0.1"}, "*");
+
+after the document has been loaded.
 
 
  
@@ -90,9 +91,10 @@ While multiple competing micropayment service proivders supported by the content
 The API of the micropayment service provider should offer a call that simultaneously verifies, caches in and devalues the tokens.
 
 A `POST` to `https://<identifying-domain-of-service-provider>/cashIn/` with the information about
- * service provider that issued the token
- * token secret
- * identifying information about the content proivder
+
+* service provider that issued the token
+* token secret
+* identifying information about the content proivder
 
 should return the value of the token or an error if the token is invalid.
 This implies that if the same content is `POST`ed twice it will return an error on the second time, becuase the token has been invalideated on the first call.
