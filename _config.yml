@@ -6,3 +6,6 @@ description: "The specification for the pennytoken micropayment system"
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+url: https://konstantinschubert.github.io/
+baseurl: pennytoken-spec/
