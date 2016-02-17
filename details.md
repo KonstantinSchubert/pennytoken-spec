@@ -49,13 +49,13 @@ Service providers are identified by their domains.
  that can alternatively be served without ads when pennytokens are passed.
  
 
-    <meta pennytoken-content='
+    <meta name="pennytoken-content" content='
         {
             "providers" : ["list of ident. domains of supported service providers"]
             "contents" :[
                 {
                     "urls"    : ["list of regex patterns matching all urls of this 
-                                  content provider that support/require pennytokens."],
+                                  content provider that support/require pennytokens on this domain."],
                     "price"   : "token price per page load in fractions of dollar cents",
                     "feature" : "a description of what is offered 
                                  in exchange for the tokens. E.g. no ads"
