@@ -12,7 +12,7 @@ layout: page
 
     {
        "pennytoken-service-provider" : "Identifying domain of the service provider
-                                        that issued the token."
+                                        that issued the token.",
        "pennytoken-token-secret"     : "The secret that uniquely identifies 
                                         the token."
     }
