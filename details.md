@@ -90,11 +90,12 @@ While multiple competing micropayment service proivders supported by the content
 
 The API of the micropayment service provider should offer a call that simultaneously verifies, caches in and devalues the tokens.
 
-A `POST` to `https://<identifying-domain-of-service-provider>/cashIn/` with the information about
+A `POST` to `https://<identifying-domain-of-service-provider>/cashIn/` with the POSTs key-value pairs including
 
-* service provider that issued the token
-* token secret
-* identifying information about the content proivder
+* the keys and values from the token
+* a key `payment-id` with identifying information about the content provider
 
-should return the value of the token or an error if the token is invalid.
-This implies that if the same content is `POST`ed twice it will return an error on the second time, becuase the token has been invalideated on the first call.
+should return the value of the token as a string or a `HTTP 403 Forbidden`  if the token is invalid.
+This implies that if the same content is `POST`ed twice it will return a `HTTP 403 Forbidden` on the second time, because the token has been invalideated on the first call.
+
+The nature of the `payment-id` field is not yet part of the standard and may depend on the micropayment service provider.
