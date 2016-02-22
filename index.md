@@ -22,7 +22,7 @@ Three types of actors interplay during a micropayment transacting.
     For example a person browsing the internet, consuming media content on different websites. 
 3. The micropayment service provider: 
     He is paid by the user and pays the content creators according to usage. 
-    [Here is a live demo](micropayment-service.boosted.science) of such a provider.
+    [Here is a live demo](http://micropayment-service.boosted.science) of such a provider.
 
 ## Design goals 
  * Works across an unlimited number of content providers. 
